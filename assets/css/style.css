@@ -1,0 +1,30 @@
+.header-chat {
+    display: flex;
+    justify-content: start;
+    background-color: #f0f2f5;
+    color: black;
+    padding: 10px;
+}
+
+.header-chat__pic {
+    width: 17%;
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+.header-chat__group {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.header-chat__name {
+    margin-bottom: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.header-chat__status {
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
