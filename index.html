@@ -49,43 +49,184 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar chats..." aria-label="Buscar">
+                <form class="d-flex navbar-form" role="search">
+                    <input class="form-control me-2" type="search" placeholder="" aria-label="Buscar">
                     <button class="btn btn-outline-primary" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
     </nav>
 
+    <div class="container-fluid g-0">
+        <div class="row g-0">
 
-    <header class="header-chat">
-        <img class="img-fluid header-chat__pic" src="./assets/img/avatar01.png" alt="">
-        <div class="header-chat__group">
-            <p class="header-chat__name">Paulina</p>
-            <p class="header-chat__status">En linea</p>
-        </div>
-    </header>
+            <div class="col-lg-4 contacts">
 
-    <main class="chat">
-        <div class="chat__bubble">
-            <p>hola</p>
+                <div class="contacts-header">
+                    <div class="contacts-header__container">
+                        <p class="contacts-header__title">Chats</p>
+                    </div>
+                </div>
+
+                <section class="contacts-bar">
+                    <input class="contacts-bar__input" type="text" placeholder="Busca un contacto">
+                    <button type="button" class="btn btn-primary btn-sm contacts-bar__btn">Buscar</button>
+                </section>
+
+                <section class="contacts-list">
+                    <div class="contacts-profile" onclick="read()">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name contacts-profile__name--pending">Claudia</p>
+                            <span>🔴</span>
+                        </div>
+                    </div>
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name">Paulina</p>
+                        </div>
+                    </div>
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name">Juan</p>
+                        </div>
+                    </div>
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name">Roberto</p>
+                        </div>
+                    </div>
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name">Matias</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="window-chat col-lg-8">
+
+                <header class="header-chat">
+                    <img class="img-fluid header-chat__pic" src="./assets/img/avatar01.png" alt="">
+                    <div class="header-chat__group">
+                        <p class="header-chat__name">Paulina</p>
+                        <p class="header-chat__status">En linea</p>
+                    </div>
+                </header>
+
+                <button type="button" class="btn btn-primary btn-sm showContactsBtn" onclick="showContacts()">Mostrar
+                    contactos</button>
+                <section class="contacts-list" id="contactsList">
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name contacts-profile__name--pending">Claudia</p>
+                            <span>🔴</span>
+                        </div>
+                    </div>
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name">Paulina</p>
+                        </div>
+                    </div>
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name">Juan</p>
+                        </div>
+                    </div>
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name">Roberto</p>
+                        </div>
+                    </div>
+                    <div class="contacts-profile">
+                        <img class="img-fluid contacts-profile__pic" src="./assets/img/avatar01.png" alt="">
+                        <div class="contacts-profile__group">
+                            <p class="contacts-profile__name">Matias</p>
+                        </div>
+                    </div>
+                </section>
+
+                <main class="chat">
+                    <div class="chat__container">
+                        <div class="chat__bubble">
+                            <p class="chat__text">hola</p>
+                            <span class="chat__data">12:28 PM, Hoy</span>
+                        </div>
+                    </div>
+                    <div class="chat__container chat__container--right">
+                        <div class="chat__bubble chat__bubble--right">
+                            <p class="chat__text">hola</p>
+                            <span class="chat__data">1:30 PM, Hoy</span>
+                        </div>
+                    </div>
+                    <div class="chat__container">
+                        <div class="chat__bubble">
+                            <p class="chat__text">Lorem ipsum dolor sit</p>
+                            <span class="chat__data">2:43 PM, Hoy</span>
+                        </div>
+                    </div>
+                    <div class="chat__container chat__container--right">
+                        <div class="chat__bubble chat__bubble--right">
+                            <p class="chat__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+                                impedit
+                                aliquam</p>
+                            <span class="chat__data">2:44 PM, Hoy</span>
+                        </div>
+                    </div>
+                    <div class="chat__container">
+                        <div class="chat__bubble">
+                            <p class="chat__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam</p>
+                            <span class="chat__data">4:51 PM, Hoy</span>
+                        </div>
+                    </div>
+                    <div class="chat__container chat__container--right">
+                        <div class="chat__bubble chat__bubble--right">
+                            <p class="chat__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+                                impedit ❤️</p>
+                            <span class="chat__data">9:17 PM, Hoy</span>
+                        </div>
+                    </div>
+                    <div class="chat__container chat__container--right">
+                        <div class="chat__bubble chat__bubble--right">
+                            <p class="chat__text">bye bye</p>
+                            <span class="chat__data">12:28 PM, Hoy</span>
+                        </div>
+                    </div>
+                    <div class="chat__container">
+                        <div class="chat__bubble">
+                            <p class="chat__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+                                impedit
+                                aliquam, laboriosam</p>
+                            <span class="chat__data">12:28 PM, Hoy</span>
+                        </div>
+                    </div>
+                </main>
+
+                <section class="chat-bar">
+                    <input class="chat-bar__input" type="text" placeholder="Escribe un mensaje">
+                    <button type="button" class="btn btn-primary btn-sm chat-bar__btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        🖇️
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">🖼️ Imagen</a></li>
+                        <li><a class="dropdown-item" href="#">🎞️ Video</a></li>
+                        <li><a class="dropdown-item" href="#">📄 Documento</a></li>
+                      </ul>
+                    <button type="button" class="btn btn-primary btn-sm chat-bar__btn">Enviar</button>
+                </section>
+            </div>
         </div>
-        <div class="chat__bubble chat__bubble--right">
-            <p>holiwis</p>
-        </div>
-        <div class="chat__bubble">
-            <p></p>
-        </div>
-        <div class="chat__bubble chat__bubble--right">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam impedit aliquam, laboriosam</p>
-        </div>
-        <div class="chat__bubble">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam</p>
-        </div>
-        <div class="chat__bubble chat__bubble--right">
-            <p>Good Night ❤️</p>
-        </div>
-    </main>
+
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
